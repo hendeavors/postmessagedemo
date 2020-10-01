@@ -24,11 +24,7 @@
     function onLoad() {
         // Simulate a parent iframe behavior when receiving a message
         window.addEventListener("message", (event) => {
-          var payload = null;
-          for (var type in event.data) {
-              payload = event.data;
-          }
-
+          var payload = event.data;
           if (null !== payload) {
               // Proxy the message to the parent window
               window.parent.postMessage(payload, "*");
