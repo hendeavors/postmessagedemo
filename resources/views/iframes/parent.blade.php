@@ -30,8 +30,6 @@
               window.parent.postMessage(payload, "*");
               iframeWindow.postMessage(payload, "*");
           }
-
-          payload = null;
         }, false);
     }
     </script>
