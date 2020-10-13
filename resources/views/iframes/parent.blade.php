@@ -12,7 +12,7 @@
 
     <div class="card-body iframecontent">
         <iframe src="/child" id="child" frameBorder="0" width="100%" height="500px" scrolling="no"></iframe>
-    <div>
+    </div>
 </div>
 @endsection
 
@@ -23,7 +23,7 @@
 
     function onLoad() {
         // Simulate a parent iframe behavior when receiving a message
-        window.addEventListener("message", (event) => {
+        window.addEventListener("message", function(event) {
           var payload = event.data;
           if (null !== payload) {
               // Proxy the message to the parent window

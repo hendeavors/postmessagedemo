@@ -13,7 +13,7 @@
 
     <div class="card-body iframecontent">
         <iframe src="/parent" id="parent" frameBorder="0" width="100%" height="500px" scrolling="no"></iframe>
-    <div>
+    </div>
 </div>
 @endsection
 
@@ -24,7 +24,7 @@
 
     function onLoad() {
         // Simulate a client receiving postMessage
-        window.addEventListener("message", (event) => {
+        window.addEventListener("message", function(event) {
           var proxyAction = null;
           var proxyActionValues = null;
           var proxyActionTokenValue = null;

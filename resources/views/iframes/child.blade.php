@@ -25,7 +25,7 @@
 @section('scripts')
     <script>
     function onLoad() {
-        window.addEventListener("message", (event) => {
+        window.addEventListener("message", function(event) {
           for (var type in event.data) {
               var payload = event.data[type];
 
@@ -48,7 +48,7 @@
             action: "OpenExternalWindow",
             args: [$form.find("#exampleFormControlInput1").val(), $form.find("#exampleFormControlTextarea1").val()],
             token: sessionStorage.getItem("token"),
-        });
+        }, "*");
     });
     </script>
 @endsection
